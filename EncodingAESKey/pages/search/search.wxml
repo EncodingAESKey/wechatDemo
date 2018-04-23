@@ -1,0 +1,6 @@
+<!--search.wxml-->
+<view class="container">
+    <block wx:for="{{search}}" wx:for-index="index" wx:for-item="itemName" wx:key="{{index}}">
+        <text>{{itemName.name}}</text>
+    </block>
+</view>

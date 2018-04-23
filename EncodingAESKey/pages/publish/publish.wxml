@@ -1,0 +1,48 @@
+<!--publish.wxml-->
+<!--
+    <view class="container">
+        <block wx:for="{{publish}}" wx:for-index="index" wx:for-item="itemName" wx:key="{{index}}">
+            <text>{{itemName.name}}</text>
+        </block>
+    </view>
+-->
+<block wx:if="{{!success}}">
+	<view class="area">
+		<text class="areaTitle">我的地址 : </text>
+		<view class="areaInfo" bindtap="getMyPosition">{{address}}</view>
+	</view>
+	<view class="area">
+		<text class="areaTitle">类型 : </text>
+		<view class="areaInfo">
+			<radio-group class="radio-group" bindchange="radioTypeChange">
+				<label class="radio" wx:for="{{items}}" wx:key="index">
+					<radio value="{{item.value}}" checked="{{item.checked}}"/>
+	                {{item.name}}
+				</label>
+			</radio-group>
+		</view>
+	</view>
+	<view class="area">
+	    <text class="areaTitle">说明 : </text>
+	    <input class="areaInfo" placeholder="请填写您的具体需求"
+	        placeholder-class="placeholder"
+	        value="{{message}}"
+	        bindinput="explainMessageChange"/>
+	</view>
+	<view class="area">
+		<text class="areaTitle">联系方式 : </text>
+		<input class="areaInfo" placeholder="请填写您的联系方式"
+	        placeholder-class="placeholder"
+	        value="{{contact}}"
+	        bindinput="contactChange"/>
+	</view>
+	<view class="btn" bindtap="handlePostMessage">发布信息</view>
+</block>
+
+<block wx:if="{{success}}">
+	<view class="wrapper">
+		<view class="succTitle"><icon class="succIcon" type="success" size="40" color="#22cad3"/>恭喜您,发布成功！</view>
+		<view class="succItem">1. 审核通过后信息将被展示在地图上</view>
+		<navigator class="btn" url="/pages/index/index" hover-class="navigator-hover">返回首页</navigator>
+	</view>
+</block>

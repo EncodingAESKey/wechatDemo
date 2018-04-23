@@ -1,0 +1,14 @@
+{
+	"pages":[
+		"pages/index/index",
+        "pages/logs/logs",
+		"pages/publish/publish",
+		"pages/search/search"
+	],
+	"window":{
+		"backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#0090ff",
+		"navigationBarTitleText": "IT外包云平台",
+		"navigationBarTextStyle":"#fff"
+	}
+}

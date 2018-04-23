@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="mapCon">
+	<map id="map"
+		longitude="{{longitude}}"
+		latitude="{{latitude}}"
+		scale="16"
+		show-location
+		controls="{{controls}}"
+		markers="{{markers}}"
+		style="width: 100%;height:100%;"
+		bindcontroltap="controltap"
+		bindmarkertap="bindmarkertap"
+	>
+	</map>
+</view>
+<view class="bottomArea">
+<view class="publish" bindtap="bindtapEvent">	12345</view>
+	<view class="search">	tre</view>
+</view>
